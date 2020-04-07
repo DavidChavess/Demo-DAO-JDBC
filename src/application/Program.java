@@ -25,6 +25,11 @@ public class Program {
 		departments.forEach(System.out::println);
 		
 		
+		System.out.println("\n\n ===Test03 findAll===");
+		List<Seller> listAll = sld.findAll();
+		listAll.forEach(System.out::println);
+		
+		
 
 		
 		
