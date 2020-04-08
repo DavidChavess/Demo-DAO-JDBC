@@ -31,12 +31,19 @@ public class Program {
 		listAll.forEach(System.out::println);
 		
 		
-	
-		
 		System.out.println("\n\n ===Test04 Insert===");
 		Seller insertSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.0, department);
 		sellerDao.insert(insertSeller);
 		System.out.println("INSERTED! NEW ID "+ insertSeller.getId());
+		
+		
+		System.out.println("\n\n ===Test05 Update===");
+		seller = sellerDao.findById(1);
+		seller.setName("Bruce Waine");
+		seller.setBaseSalary(4000.0);
+		sellerDao.update(seller);;
+		System.out.println("Update Completed !");
+
 
 	}
 
