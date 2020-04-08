@@ -41,9 +41,16 @@ public class Program {
 		seller = sellerDao.findById(1);
 		seller.setName("Bruce Waine");
 		seller.setBaseSalary(4000.0);
-		sellerDao.update(seller);;
+		sellerDao.update(seller);
 		System.out.println("Update Completed !");
+		
+		System.out.println("\n\n ===Test06 Delete===");
 
+		for(int i = 10; i < 16; i++) {
+			sellerDao.deleteById(i);
+		}
+	
+		System.out.println("Deleted duplicates");
 
 	}
 
